@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f7f5;
-    --paper: #ffffff;
+    --bg: #ffffff;
+    --soft: #f4f4f2;
     --text: #1c1c1a;
     --muted: #6b6b66;
     --line: #e6e6e1;
@@ -30,16 +30,17 @@
   .kicker { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
   h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.15; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; text-wrap: balance; }
   .author { color: var(--muted); margin: 0 0 32px; }
-  .links { display: grid; gap: 12px; }
-  .link {
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
-    padding: 16px 20px; color: var(--text); text-decoration: none;
-    transition: border-color .15s;
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 24px; border-radius: 10px; font-weight: 500; font-size: 16px;
+    text-decoration: none; transition: background-color .15s, border-color .15s;
   }
-  .link:hover { border-color: #b9b9b2; }
-  .link span:first-child { font-weight: 500; }
-  .link span:last-child { color: var(--muted); font-size: 15px; min-width: 0; overflow-wrap: anywhere; text-align: right; }
+  .btn-primary { background: var(--text); color: #fff; border: 1px solid var(--text); }
+  .btn-primary:hover { background: #3a3a37; }
+  .btn-secondary { background: var(--soft); color: var(--text); border: 1px solid var(--line); }
+  .btn-secondary:hover { border-color: #b9b9b2; }
+  section.soft { background: var(--soft); border-top: 0; border-radius: 16px; padding: 28px 28px 14px; }
   section { border-top: 1px solid var(--line); padding-top: 32px; margin-top: 40px; }
   h2 { font-size: 22px; font-weight: 600; margin: 0 0 16px; }
   p { margin: 0 0 14px; }
@@ -55,8 +56,8 @@
   .src { color: var(--muted); font-size: 14px; white-space: nowrap; }
   @media (max-width: 480px) {
     .page { padding-block: 40px 64px; }
-    .link { flex-direction: column; align-items: flex-start; gap: 4px; }
-    .link span:last-child { text-align: left; }
+    .btn { width: 100%; }
+    section.soft { padding: 24px 20px 10px; }
   }
 </style>
 </head>
@@ -67,13 +68,9 @@
     <p class="kicker">Тестовое задание</p>
     <h1>Лендинг Goulash.tech для&nbsp;небольших ресторанов доставки</h1>
     <p class="author">Елизавета Калмыкова, дизайнер</p>
-    <div class="links">
-      <a class="link" href="https://elizkalm.github.io/goulash-landing/" target="_blank" rel="noopener">
-        <span>Лендинг</span><span>elizkalm.github.io/goulash-landing</span>
-      </a>
-      <a class="link" href="https://disk.yandex.ru/d/1H7lP3TAT-cAcQ" target="_blank" rel="noopener">
-        <span>Баннер и анимация</span><span>disk.yandex.ru</span>
-      </a>
+    <div class="buttons">
+      <a class="btn btn-primary" href="https://elizkalm.github.io/goulash-landing/" target="_blank" rel="noopener">Открыть лендинг →</a>
+      <a class="btn btn-secondary" href="https://disk.yandex.ru/d/1H7lP3TAT-cAcQ" target="_blank" rel="noopener">Баннер и анимация →</a>
     </div>
   </header>
 
@@ -93,7 +90,7 @@
     <p class="note">С этой аудиторией уже работают Starter (тариф «Запуск» для небольшого оборота) и&nbsp;Smartomato. Отличаемся подачей: не&nbsp;предлагаем уходить из&nbsp;агрегаторов, а&nbsp;переводим постоянных гостей к&nbsp;себе постепенно.</p>
   </section>
 
-  <section>
+  <section class="soft">
     <h2>Главная мысль</h2>
     <p class="offer">+29% с&nbsp;каждого заказа — в&nbsp;вашу кассу, а&nbsp;не&nbsp;агрегатору</p>
     <p>Первый экран собран по&nbsp;той&nbsp;же формуле, что у&nbsp;вас: что за&nbsp;продукт, одна крупная цифра результата, за&nbsp;счёт чего она получается. Главный страх владельца снимаем сразу: агрегаторы остаются, их заказы приходят в&nbsp;ту&nbsp;же систему.</p>
@@ -110,7 +107,7 @@
     <p class="note">У каждой цифры на&nbsp;странице есть источник в&nbsp;сноске. Данные в&nbsp;интерфейсах — заказы, бонусы, курьер — придуманы для демонстрации.</p>
   </section>
 
-  <section>
+  <section class="soft">
     <h2>Баннер</h2>
     <p class="offer">Зачем отдавать 30%?</p>
     <p>Визуал — чек ресторана, от&nbsp;которого оторван кусок с&nbsp;надписью «30% комиссия агрегатора». Боль владельца считывается за&nbsp;секунду, ещё до&nbsp;того, как прочитан текст.</p>
