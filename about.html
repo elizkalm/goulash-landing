@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тестовое задание для Goulash.tech — Елизавета Калмыкова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --paper: #ffffff;
+    --text: #1c1c1a;
+    --muted: #6b6b66;
+    --line: #e6e6e1;
+    --accent: #1c1c1a;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.6 "Golos Text", -apple-system, "Segoe UI", Arial, sans-serif;
+    padding-inline: 16px;
+  }
+  .page { max-width: 720px; margin: 0 auto; padding-block: 64px 96px; }
+  header { margin-bottom: 48px; }
+  .kicker { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.15; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; text-wrap: balance; }
+  .author { color: var(--muted); margin: 0 0 32px; }
+  .links { display: grid; gap: 12px; }
+  .link {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 20px; color: var(--text); text-decoration: none;
+    transition: border-color .15s;
+  }
+  .link:hover { border-color: #b9b9b2; }
+  .link span:first-child { font-weight: 500; }
+  .link span:last-child { color: var(--muted); font-size: 15px; min-width: 0; overflow-wrap: anywhere; text-align: right; }
+  section { border-top: 1px solid var(--line); padding-top: 32px; margin-top: 40px; }
+  h2 { font-size: 22px; font-weight: 600; margin: 0 0 16px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--muted); }
+  b { font-weight: 600; }
+  .quote { border-left: 2px solid var(--text); padding-left: 16px; margin: 16px 0; }
+  .offer { font-size: clamp(22px, 3.5vw, 28px); line-height: 1.25; font-weight: 600; margin: 0 0 14px; text-wrap: balance; }
+  .note { color: var(--muted); font-size: 15px; }
+  a { color: inherit; text-decoration-color: #b9b9b2; text-underline-offset: 3px; }
+  a:hover { text-decoration-color: currentColor; }
+  .src { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  @media (max-width: 480px) {
+    .page { padding-block: 40px 64px; }
+    .link { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .link span:last-child { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <p class="kicker">Тестовое задание</p>
+    <h1>Лендинг Goulash.tech для&nbsp;небольших ресторанов доставки</h1>
+    <p class="author">Елизавета Калмыкова, дизайнер</p>
+    <div class="links">
+      <a class="link" href="https://elizkalm.github.io/goulash-landing/" target="_blank" rel="noopener">
+        <span>Лендинг</span><span>elizkalm.github.io/goulash-landing</span>
+      </a>
+      <a class="link" href="https://disk.yandex.ru/d/1H7lP3TAT-cAcQ" target="_blank" rel="noopener">
+        <span>Баннер и анимация</span><span>disk.yandex.ru</span>
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Кому предлагаем</h2>
+    <p>Владельцам ресторанов доставки на&nbsp;1–3 точки: пицца, роллы, бургеры. Большая часть заказов у&nbsp;них идёт через агрегаторы.</p>
+    <p><b>Почему именно им:</b></p>
+    <ul>
+      <li><b>Комиссия ощутимая.</b> Яндекс Еда при доставке своими курьерами берёт 29,17% с&nbsp;заказа без НДС. <a class="src" href="https://yandex.ru/project/eda/partners/registration" target="_blank" rel="noopener">Яндекс Еда</a></li>
+      <li><b>Агрегатор — главный канал.</b> Через агрегаторы принимают заказы 49% заведений, через свой сайт или приложение — 36%, и эта доля растёт: в&nbsp;2023 году было 33%. <a class="src" href="https://datainsight.ru/DI_Restaurant_Delivery_2025" target="_blank" rel="noopener">Data Insight, 2025</a></li>
+      <li><b>Гость остаётся у&nbsp;агрегатора из-за бонусов.</b>
+        <div class="quote">«Пользователям просто удобнее в&nbsp;одном приложении заказывать в&nbsp;разных местах: у&nbsp;них там баллы, история заказов»</div>
+        Основатель FoodBand, <a href="https://www.kommersant.ru/doc/8632851" target="_blank" rel="noopener">Коммерсантъ, 29.04.2026</a>. Переманить гостя можно только своей выгодой, а&nbsp;у&nbsp;Goulash как раз есть лояльность.
+      </li>
+      <li><b>Основной сайт Goulash говорит с&nbsp;сетями.</b> Кейсы там про сети, а&nbsp;«+3&nbsp;млн&nbsp;₽ на&nbsp;точку» посчитаны для сетей с&nbsp;оборотом от&nbsp;16&nbsp;млн в&nbsp;месяц. Владелец одной пиццерии себя там не&nbsp;узнает, поэтому ему нужна своя страница.</li>
+    </ul>
+    <p class="note">С этой аудиторией уже работают Starter (тариф «Запуск» для небольшого оборота) и&nbsp;Smartomato. Отличаемся подачей: не&nbsp;предлагаем уходить из&nbsp;агрегаторов, а&nbsp;переводим постоянных гостей к&nbsp;себе постепенно.</p>
+  </section>
+
+  <section>
+    <h2>Главная мысль</h2>
+    <p class="offer">+29% с&nbsp;каждого заказа — в&nbsp;вашу кассу, а&nbsp;не&nbsp;агрегатору</p>
+    <p>Первый экран собран по&nbsp;той&nbsp;же формуле, что у&nbsp;вас: что за&nbsp;продукт, одна крупная цифра результата, за&nbsp;счёт чего она получается. Главный страх владельца снимаем сразу: агрегаторы остаются, их заказы приходят в&nbsp;ту&nbsp;же систему.</p>
+  </section>
+
+  <section>
+    <h2>Что можно потрогать на&nbsp;лендинге</h2>
+    <ul>
+      <li><b>Калькулятор</b> — сколько уходит агрегатору и&nbsp;сколько останется, если часть гостей начнёт заказывать напрямую.</li>
+      <li><b>Экран гостя</b> — статусы заказа и&nbsp;бонусы в&nbsp;приложении ресторана.</li>
+      <li><b>Доска кухни</b> — все заказы в&nbsp;одном окне, фильтр по&nbsp;каналу, карточки переносятся по&nbsp;этапам.</li>
+      <li><b>Форма заявки</b> — проверка полей, загрузка, успех или ошибка. Чтобы увидеть ошибку, под формой есть переключатель «имитировать ошибку».</li>
+    </ul>
+    <p class="note">У каждой цифры на&nbsp;странице есть источник в&nbsp;сноске. Данные в&nbsp;интерфейсах — заказы, бонусы, курьер — придуманы для демонстрации.</p>
+  </section>
+
+  <section>
+    <h2>Баннер</h2>
+    <p class="offer">Зачем отдавать 30%?</p>
+    <p>Визуал — чек ресторана, от&nbsp;которого оторван кусок с&nbsp;надписью «30% комиссия агрегатора». Боль владельца считывается за&nbsp;секунду, ещё до&nbsp;того, как прочитан текст.</p>
+    <p>Есть статичная версия и&nbsp;анимированная для видеоформатов. В&nbsp;идеале стоит анимировать ещё и&nbsp;заголовок, сейчас в&nbsp;движении только сцена.</p>
+  </section>
+
+  <section>
+    <h2>Как использовала ИИ</h2>
+    <ul>
+      <li><b>Фронтенд и&nbsp;логика интерфейсов.</b> Лендинг собран в&nbsp;Claude Design. Калькулятор, статусы заказа, доска кухни и&nbsp;форма написаны ИИ по&nbsp;моему промпту.</li>
+      <li><b>Дизайн-система.</b> Токены, шрифты и&nbsp;сетку линий Claude снял прямо из&nbsp;кода goulash.tech, поэтому страница выглядит как часть вашего сайта.</li>
+      <li><b>Тексты.</b> Варианты оффера и&nbsp;блоков писала вместе с&nbsp;Claude, финальная редактура моя.</li>
+      <li><b>Ресёрч.</b> ИИ-агенты собрали данные по&nbsp;рынку и&nbsp;конкурентам, отдельный агент перепроверил каждую цифру по&nbsp;первоисточникам.</li>
+      <li><b>Изображения и&nbsp;видео.</b> Баннер сгенерирован в&nbsp;ChatGPT, анимация — в&nbsp;Gemini Omni.</li>
+      <li><b>Публикация.</b> Сайт выложен на&nbsp;GitHub Pages, обновления выкладывает ИИ-агент.</li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
